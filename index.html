@@ -1,49 +1,113 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  <head>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
     <title>Gyeonghun Kim</title>
-
     <meta name="author" content="Gyeonghun Kim">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     
-  </head>
+    <style>
+        body { font-family: 'Lato', Verdana, Helvetica, sans-serif; font-size: 14px; color: #444; background-color: #fff; }
+        a { color: #1772d0; text-decoration: none; }
+        a:hover { color: #f09228; text-decoration: none; }
+        name { font-size: 32pt; font-weight: 700; }
+        .highlight { background-color: #ffffd0; }
+        h2 { font-size: 22px; margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .papertitle { font-weight: 700; }
+    </style>
+    
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
 
-  <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-	  <tbody>
-	    <tr style="padding:0px">
-	      <td style="padding:0px">
-	        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-	          <tbody>
-	            <tr style="padding:0px">
-	              <td style="padding:2.5%;width:63%;vertical-align:middle">
-	                <p class="name" style="text-align: center; font-size: 32pt; font-weight: 800;">
-	                  Gyeonghun Kim
-	                </p>
-	                <p>
-	                  I'm an undergraduate student at <strong>Seoul National University</strong>, majoring in ECE. 
-	                  My research focus lies in <strong>Robot Learning</strong> and <strong>Physical AI</strong>.
-	                </p>
-	                <p style="text-align:center">
-	                  <a href="mailto:your_email@snu.ac.kr">Email</a> &nbsp;/&nbsp;
-	                  <a href="data/CV.pdf">CV</a> &nbsp;/&nbsp;
-	                  <a href="https://scholar.google.com/">Scholar</a> &nbsp;/&nbsp;
-	                  <a href="https://github.com/your-id">Github</a>
-	                </p>
-	              </td>
-	              <td style="padding:2.5%;width:37%;max-width:37%">
-	                <img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/your_photo.jpg">
-	              </td>
-	            </tr>
-	          </tbody>
-	        </table>
-	      </td>
-	    </tr>
-	  </tbody>
-	</table>
-  </body>
+<body>
+<table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+    <tr style="padding:0px">
+        <td style="padding:0px">
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                <tbody>
+                <tr style="padding:0px">
+                    <td style="padding:2.5%;width:63%;vertical-align:middle">
+                        <p style="text-align:center"><name>Gyeonghun Kim</name></p>
+                        <p>I am an undergraduate student at <b>Seoul National University</b> majoring in Electrical and Computer Engineering (ECE). My research interests lie at the intersection of <b>Robot Learning</b> and <b>Physical AI</b>, specifically focusing on how agents can learn complex manipulation tasks in unstructured environments.
+                        </p>
+                        <p style="text-align:center">
+                            <a href="mailto:kgh011016@snu.ac.kr">Email</a> &nbsp;/&nbsp;
+                            <a href="data/CV.pdf">CV</a> &nbsp;/&nbsp;
+                            <a href="https://scholar.google.com/">Google Scholar</a> &nbsp;/&nbsp;
+                            <a href="https://github.com/kimhuni">Github</a> &nbsp;/&nbsp;
+                            <a href="www.linkedin.com/in/gyeonghun-kim-74b38a257">LinkedIn</a>
+                        </p>
+                    </td>
+                    <td style="padding:2.5%;width:37%;max-width:37%">
+                        <img style="width:100%;max-width:100%;border-radius:50%;" alt="profile photo" src="images/profile.jpg">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                <tbody>
+                <tr>
+                    <td style="padding:20px;width:100%;vertical-align:middle">
+                        <h2>Research Focus</h2>
+                        <p>
+                            My goal is to build robots that can perceive and interact with the physical world as robustly as humans do. I am currently exploring <b>Vision-Language Models (VLMs)</b> for robotic control and <b>Reinforcement Learning</b> under physical constraints. 
+                            The fundamental problem I address is:
+                            <br><br>
+                            $$\min_{\theta} \mathbb{E}_{\tau \sim \pi_{\theta}} \left[ \sum_{t=0}^{T} \gamma^t R(s_t, a_t) \right]$$
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                <tbody>
+                <tr>
+                    <td style="padding:20px;width:100%;vertical-align:middle">
+                        <h2>Publications</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:20px;width:25%;vertical-align:middle"><img src="images/paper_thumb.png" width="160"></td>
+                    <td style="padding:20px;width:75%;vertical-align:middle">
+                        <a href="#"><span class="papertitle">Learning Physical Interaction via Vision-Language Models</span></a>
+                        <br>
+                        <strong>Gyeonghun Kim</strong>, Co-author 1, Co-author 2
+                        <br>
+                        <em>Under Review / ICRA 2026</em>
+                        <br>
+                        <a href="#">project page</a> / <a href="#">arXiv</a> / <a href="#">video</a>
+                        <p>Integrating high-level semantic reasoning with low-level motor control for agile robotics.</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                <tbody>
+                <tr>
+                    <td style="padding:20px;width:100%;vertical-align:middle">
+                        <h2>Projects</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:20px;width:25%;vertical-align:middle"><img src="images/project_thumb.jpg" width="160"></td>
+                    <td style="padding:20px;width:75%;vertical-align:middle">
+                        <a href="#"><span class="papertitle">Open-Source Robot Arm Controller</span></a>
+                        <br>
+                        <em>Personal Project, 2025</em>
+                        <br>
+                        <a href="#">Github</a>
+                        <p>Developed a custom PID-based controller for a 6-DOF robotic arm using Python and Arduino.</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
 </html>
