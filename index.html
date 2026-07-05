@@ -16,6 +16,9 @@
         .papertitle { font-weight: 700; }
         img { max-width: 100%; height: auto; }
 
+        /* Honor the specified column widths regardless of image size */
+        .header-table, .entry-table { table-layout: fixed; }
+
         /* Mobile layout: stack table cells into a single column */
         @media (max-width: 600px) {
             body { font-size: 15px; }
@@ -42,12 +45,12 @@
     <tbody>
     <tr style="padding:0px">
         <td style="padding:0px">
-            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <table class="header-table" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                 <tbody>
                 <tr style="padding:0px">
                     <td class="bio-cell" style="padding:2.5%;width:63%;vertical-align:middle">
                         <p style="text-align:center"><name>Gyeonghun Kim</name></p>
-                        <p>I am an undergraduate student at <b>Seoul National University</b> majoring in Electrical and Computer Engineering (ECE). My research interests lie at the intersection of <b>Robot Learning</b> and <b>Physical AI</b>, specifically focusing on how agents can learn complex manipulation tasks in unstructured environments.
+                        <p>I am an undergraduate student at <b>Seoul National University</b> majoring in Electrical and Computer Engineering (ECE), and I am currently conducting a research internship at <b>RLWRLD</b>. My research interests lie at the intersection of <b>Robot Learning</b> and <b>Physical AI</b>, specifically focusing on how agents can learn complex manipulation tasks in unstructured environments.
                         </p>
                         <p style="text-align:center">
                             <a href="mailto:kgh011016@snu.ac.kr">kgh011016@snu.ac.kr</a> &nbsp;/&nbsp;
@@ -80,13 +83,9 @@
                 </tbody>
             </table>
 
-            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <h2 style="margin-left:20px;margin-right:20px">Publications</h2>
+            <table class="entry-table" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                 <tbody>
-                <tr>
-                    <td style="padding:20px;width:100%;vertical-align:middle" colspan="2">
-                        <h2>Publications</h2>
-                    </td>
-                </tr>
                 <tr>
                     <td class="thumb-cell" style="padding:16px;width:20%;vertical-align:middle">
                         <img src="images/paper1_thumb.png" width="100%">
@@ -120,15 +119,11 @@
                 </tbody>
             </table>
 
-            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <h2 style="margin-left:20px;margin-right:20px">Projects</h2>
+            <table class="entry-table" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                 <tbody>
                 <tr>
-                    <td style="padding:20px;width:100%;vertical-align:middle">
-                        <h2>Projects</h2>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="thumb-cell" style="padding:20px;width:25%;vertical-align:middle"><img src="images/project_thumb.jpg" width="160"></td>
+                    <td class="thumb-cell" style="padding:20px;width:25%;vertical-align:middle"><img src="images/project_thumb.png" width="100%"></td>
                     <td class="desc-cell" style="padding:20px;width:75%;vertical-align:middle">
                         <span class="papertitle">HRL-LoRA: Hierarchical RL for Consistent Subtask Discovery in VLAs</span>
                         <br>
