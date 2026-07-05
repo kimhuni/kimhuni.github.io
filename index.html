@@ -14,6 +14,24 @@
         .highlight { background-color: #ffffd0; }
         h2 { font-size: 22px; margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
         .papertitle { font-weight: 700; }
+        img { max-width: 100%; height: auto; }
+
+        /* Mobile layout: stack table cells into a single column */
+        @media (max-width: 600px) {
+            body { font-size: 15px; }
+            name { font-size: 26pt; }
+            .bio-cell, .photo-cell, .thumb-cell, .desc-cell {
+                display: block;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box;
+            }
+            .photo-cell { text-align: center; padding: 0 0 10px 0 !important; }
+            .photo-cell img { max-width: 200px; }
+            .thumb-cell { text-align: center; padding: 10px 20px 0 20px !important; }
+            .thumb-cell img { max-width: 220px; width: auto !important; }
+            .desc-cell { padding: 10px 20px !important; }
+        }
     </style>
     
     <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -27,19 +45,19 @@
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                 <tbody>
                 <tr style="padding:0px">
-                    <td style="padding:2.5%;width:63%;vertical-align:middle">
+                    <td class="bio-cell" style="padding:2.5%;width:63%;vertical-align:middle">
                         <p style="text-align:center"><name>Gyeonghun Kim</name></p>
                         <p>I am an undergraduate student at <b>Seoul National University</b> majoring in Electrical and Computer Engineering (ECE). My research interests lie at the intersection of <b>Robot Learning</b> and <b>Physical AI</b>, specifically focusing on how agents can learn complex manipulation tasks in unstructured environments.
                         </p>
                         <p style="text-align:center">
-                            <a href="mailto:kgh011016@snu.ac.kr">Email</a> &nbsp;/&nbsp;
+                            <a href="mailto:kgh011016@snu.ac.kr">kgh011016@snu.ac.kr</a> &nbsp;/&nbsp;
                             <a href="data/CV.pdf">CV</a> &nbsp;/&nbsp;
-                            <a href="https://scholar.google.com/">Google Scholar</a> &nbsp;/&nbsp;
+                            <a href="https://scholar.google.com/citations?hl=ko&user=ZGSpvx8AAAAJ">Google Scholar</a> &nbsp;/&nbsp;
                             <a href="https://github.com/kimhuni">Github</a> &nbsp;/&nbsp;
                             <a href="https://www.linkedin.com/in/ghkim-space">LinkedIn</a>
                         </p>
                     </td>
-                    <td style="padding:2.5%;width:37%;max-width:37%">
+                    <td class="photo-cell" style="padding:2.5%;width:37%;max-width:37%">
                         <img style="width:100%;max-width:100%;border-radius:50%;" alt="profile photo" src="images/profile.png">
                     </td>
                 </tr>
@@ -70,23 +88,25 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding:16px;width:20%;vertical-align:middle">
+                    <td class="thumb-cell" style="padding:16px;width:20%;vertical-align:middle">
                         <img src="images/paper1_thumb.png" width="100%">
                     </td>
-                    <td style="padding:20px;width:80%;vertical-align:middle">
-                        <span class="papertitle">HeLM: Hierarchical Explicit Language Memory for VLM-Guided Non-Markovian Manipulation</span>
+                    <td class="desc-cell" style="padding:20px;width:80%;vertical-align:middle">
+                        <span class="papertitle">HeLM: Hierarchical Explicit Language Memory for Non-Markovian Manipulation</span>
                         <br>
                         <strong>Gyeonghun Kim</strong>, et al.
                         <br>
-                        <em>RSS 2026, Submitted</em>
+                        <em>CoRL 2026, Under Review</em>
+                        <br>
+                        <a href="https://github.com/kimhuni/HeLM">GitHub</a>
                         <p>Proposed hierarchical VLA framework with language memory; achieved 13% success rate improvement in real-world non-Markovian tasks.</p>
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding:16px;width:20%;vertical-align:middle">
+                    <td class="thumb-cell" style="padding:16px;width:20%;vertical-align:middle">
                         <img src="images/paper2_thumb.png" width="100%">
                     </td>
-                    <td style="padding:20px;width:80%;vertical-align:middle">
+                    <td class="desc-cell" style="padding:20px;width:80%;vertical-align:middle">
                         <a href="https://github.com/dhkim-furiosa/LoRA-SP?tab=readme-ov-file"><span class="papertitle">Adaptive Capacity Allocation for Vision Language Action Fine-tuning</span></a>
                         <br>
                         Donghoon Kim, Minji Bae, Unghui Nam, <strong>Gyeonghun Kim</strong>, Suyun Lee, Kyuhong Shim, Byonghyo Shim
@@ -108,14 +128,14 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding:20px;width:25%;vertical-align:middle"><img src="images/project_thumb.jpg" width="160"></td>
-                    <td style="padding:20px;width:75%;vertical-align:middle">
-                        <a href="#"><span class="papertitle">Open-Source Robot Arm Controller</span></a>
+                    <td class="thumb-cell" style="padding:20px;width:25%;vertical-align:middle"><img src="images/project_thumb.jpg" width="160"></td>
+                    <td class="desc-cell" style="padding:20px;width:75%;vertical-align:middle">
+                        <span class="papertitle">HRL-LoRA: Hierarchical RL for Consistent Subtask Discovery in VLAs</span>
                         <br>
-                        <em>Personal Project, 2025</em>
+                        <strong>Gyeonghun Kim</strong>
                         <br>
-                        <a href="#">Github</a>
-                        <p>Developed a custom PID-based controller for a 6-DOF robotic arm using Python and Arduino.</p>
+                        <em>Course Project, Stochastic Reinforcement Learning, SNU, 2025</em>
+                        <p>Proposed a hierarchical framework that discovers robotic subtasks without manual supervision by attaching independent LoRA experts to a frozen VLA backbone (π₀) and training a PPO router to select experts. Introduced a consistency-aware reward to induce temporally coherent, interpretable subtask segmentation, and showed that entropy regularization is critical to avoid degenerate routing collapse.</p>
                     </td>
                 </tr>
                 </tbody>
